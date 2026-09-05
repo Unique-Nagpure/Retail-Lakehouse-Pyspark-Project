@@ -1,0 +1,55 @@
+{
+  "name": "retail_lakehouse_pipeline",
+  "tags": {
+    "project": "retail-lakehouse-pyspark"
+  },
+  "job_clusters": [
+    {
+      "job_cluster_key": "main_cluster",
+      "new_cluster": {
+        "spark_version": "14.3.x-scala2.12",
+        "node_type_id": "Standard_DS3_v2",
+        "num_workers": 1,
+        "data_security_mode": "SINGLE_USER"
+      }
+    }
+  ],
+  "tasks": [
+    {
+      "task_key": "unity_catalog_setup",
+      "notebook_task": {
+        "notebook_path": "/Repos/retail-lakehouse-pyspark/notebooks/05_unity_catalog_setup"
+      },
+      "job_cluster_key": "main_cluster"
+    },
+    {
+      "task_key": "bronze_ingestion",
+      "depends_on": [{ "task_key": "unity_catalog_setup" }],
+      "notebook_task": {
+        "notebook_path": "/Repos/retail-lakehouse-pyspark/notebooks/01_bronze_ingestion"
+      },
+      "job_cluster_key": "main_cluster"
+    },
+    {
+      "task_key": "silver_transform",
+      "depends_on": [{ "task_key": "bronze_ingestion" }],
+      "notebook_task": {
+        "notebook_path": "/Repos/retail-lakehouse-pyspark/notebooks/02_silver_transform"
+      },
+      "job_cluster_key": "main_cluster"
+    },
+    {
+      "task_key": "gold_aggregates",
+      "depends_on": [{ "task_key": "silver_transform" }],
+      "notebook_task": {
+        "notebook_path": "/Repos/retail-lakehouse-pyspark/notebooks/03_gold_aggregates"
+      },
+      "job_cluster_key": "main_cluster"
+    }
+  ],
+  "schedule": {
+    "quartz_cron_expression": "0 0 6 * * ?",
+    "timezone_id": "Asia/Kolkata",
+    "pause_status": "PAUSED"
+  }
+}

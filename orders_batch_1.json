@@ -1,0 +1,5 @@
+{"order_id": "O1001", "customer_id": "C001", "product_id": "P001", "quantity": 2, "order_ts": "2024-01-05T09:15:00Z", "status": "COMPLETED"}
+{"order_id": "O1002", "customer_id": "C002", "product_id": "P003", "quantity": 1, "order_ts": "2024-01-05T10:22:00Z", "status": "COMPLETED"}
+{"order_id": "O1003", "customer_id": "C003", "product_id": "P004", "quantity": 1, "order_ts": "2024-01-05T11:05:00Z", "status": "CANCELLED"}
+{"order_id": "O1004", "customer_id": "C001", "product_id": "P006", "quantity": 3, "order_ts": "2024-01-06T08:40:00Z", "status": "COMPLETED"}
+{"order_id": "O1005", "customer_id": "C004", "product_id": "P002", "quantity": 1, "order_ts": "2024-01-06T14:12:00Z", "status": "COMPLETED"}

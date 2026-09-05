@@ -1,0 +1,5 @@
+{"order_id": "O1006", "customer_id": "C005", "product_id": "P005", "quantity": 2, "order_ts": "2024-01-07T09:00:00Z", "status": "COMPLETED"}
+{"order_id": "O1007", "customer_id": "C006", "product_id": "P007", "quantity": 1, "order_ts": "2024-01-07T09:45:00Z", "status": "COMPLETED"}
+{"order_id": "O1008", "customer_id": "C002", "product_id": "P008", "quantity": 4, "order_ts": "2024-01-07T12:30:00Z", "status": "RETURNED"}
+{"order_id": "O1009", "customer_id": "C007", "product_id": "P001", "quantity": 1, "order_ts": "2024-01-08T10:10:00Z", "status": "COMPLETED", "promo_code": "NEWYEAR10"}
+{"order_id": "O1010", "customer_id": "C008", "product_id": "P004", "quantity": 2, "order_ts": "2024-01-08T16:55:00Z", "status": "COMPLETED"}

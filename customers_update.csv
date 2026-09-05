@@ -1,0 +1,4 @@
+customer_id,name,email,city,signup_date
+C001,Aditi Sharma,aditi.sharma@example.com,Bengaluru,2023-01-15
+C005,Priya Nair,priya.nair@example.com,Pune,2023-04-01
+C009,Farhan Ali,farhan.ali@example.com,Kolkata,2023-07-14
